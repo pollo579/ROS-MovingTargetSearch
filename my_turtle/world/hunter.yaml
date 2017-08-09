@@ -1,0 +1,6 @@
+image: BAlabyrinth.png
+resolution: 0.04  # Resolution of the map, meters / pixel
+origin: [-10.0, -10.0, 0.0] #The 2-D pose of the lower-left pixel in the map, as (x, y, yaw), with yaw as counterclockwise rotation (yaw=0 means no rotation). 
+occupied_thresh: 0.65 #Pixels with occupancy probability greater than this threshold are considered completely occupied.
+free_thresh: 0.196
+negate: 0
