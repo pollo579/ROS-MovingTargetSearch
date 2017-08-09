@@ -1,0 +1,24 @@
+<launch>
+  <param name="goal_x" value="-8" />
+  <param name="goal_y" value="-9" />
+  <param name="goal_theta" value="180" />
+  <param name="goal_prey_x" value="6" />
+  <param name="goal_prey_y" value="-7" />
+  <param name="goal_theta_prey" value="180" />
+
+  <param name="/use_sim_time" value="true"/>
+
+
+  <!-- <node name="make_plan_node" pkg="navigation_stage" type="make_plan_node" output="screen"/> -->
+
+<!--node for prey driving forward
+   <node name="forward" pkg="navigation_stage" type="forward" output="screen"/> -->
+
+<!--node for user controlling the prey -->
+   <node name="teleop_twist_keyboard" pkg="navigation_stage" type="teleop_twist_keyboard.py" output="screen"/>
+<!--  <remap from="cmd_vel" to="/robot_1/cmd_vel" /> -->
+
+<!--  <node name="robot_loc" pkg="navigation_stage" type="robot_loc" output="screen"/> -->
+  <node name="RequestGoal" pkg="navigation_stage" type="RequestGoal" output="screen"/>
+<!--  <node name="PreyPath" pkg="navigation_stage" type="PreyPath" output="screen"/>-->
+</launch>
